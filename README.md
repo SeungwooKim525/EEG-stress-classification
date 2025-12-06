@@ -131,6 +131,6 @@ README.md
 (Data Engineer / ML Engineer)
 
 GitHub: https://github.com/SeungwooKim525  
-Velog: (작성 예정)
+Velog: https://velog.io/@rjfldhs2/MLEEG-뇌파를-이용한-스트레스-분류-모델-개발
 
 ---
