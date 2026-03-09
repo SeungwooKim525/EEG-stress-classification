@@ -48,8 +48,11 @@ DREAMER 데이터셋을 활용한 머신러닝 기반 감정 인지 연구
 Stimuli EEG – Baseline EEG
 
 ### 2. Subject-wise Normalization
-피험자 비스트레스 구간만 기준으로 Z-score 적용  
-→ 개인차 제거 효과
+피험자 비스트레스 구간만 기준으로 Z-score 적용 → 개인차 제거 효과
+
+| Baseline 정규화 전 | Baseline 정규화 후 |
+| :---: | :---: |
+| ![정규화 전](./images/norm_before.jpeg) | ![정규화 후](./images/norm_after.jpeg) |
 
 ---
 
@@ -61,6 +64,8 @@ Stimuli EEG – Baseline EEG
 - Frequency-domain (Welch)
 - Theta/Alpha, Beta/Alpha ratio
 - RFE 로 상위 20개만 사용
+
+![Feature Importance](./images/feature_importance.jpeg)
 
 ---
 
@@ -83,7 +88,11 @@ Stimuli EEG – Baseline EEG
 | SVM Full | 55% | 과적합 |
 | Logistic | 50% | baseline |
 
-### 주요 해석
+### 주요 시각화 및 해석
+| 머신러닝 전략별 비교 | 최종모델 혼동행렬 | 최종모델 ROC Curve |
+| :---: | :---: | :---: |
+| ![성능비교](./images/model_compare.jpeg) | ![혼동행렬](./images/confusion_matrix.jpeg) | ![ROC](./images/roc_curve.jpeg) |
+
 - RFE로 노이즈 제거 시 성능 ↑
 - Ensemble이 가장 안정적
 - AUC ≈ 0.80
@@ -108,9 +117,11 @@ https://zenodo.org/record/546113#.WzF9HxJKhaQ
 ---
 
 ## Repository Structure
+```text
 notebooks/
 ├─ 01_DREAMER_data_overview.ipynb
 ├─ 02_EEG_feature_and_model_training.ipynb
+images/
 README.md
 
 
